@@ -2,6 +2,7 @@
 import React from 'react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import '../styles/HeroSection.css';
+import elanVieImg from '../assets/images/elan_vie.webp'
 
 const HeroSection = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -29,7 +30,7 @@ const HeroSection = () => {
         <div className="hero-visual">
           <div className="hero-image">
             <img 
-              src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+              src={elanVieImg} 
               alt="Lumière naturelle filtrant à travers les arbres, symbolisant le renouveau et la connexion à la nature"
               loading="eager"
             />

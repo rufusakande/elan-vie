@@ -2,6 +2,7 @@
 import React from 'react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import '../styles/AboutSection.css';
+import elanVieImg from '../assets/images/elan_vie.webp'
 
 const AboutSection = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -12,7 +13,7 @@ const AboutSection = () => {
         <div className="about-content">
           <div className="about-image">
             <img 
-              src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+              src={elanVieImg} 
               alt="David dans la nature, incarnant la philosophie de reconnexion à soi"
               loading="lazy"
             />
