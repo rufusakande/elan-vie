@@ -9,6 +9,7 @@ import AboutSection from '../components/AboutSection';
 import FaqSection from '../components/FaqSection';
 import CallToActionSection from '../components/CallToActionSection';
 import FooterSection from '../components/FooterSection';
+import BackToTop from '../components/BackToTop';
 import '../styles/theme.css';
 
 const Index = () => {
@@ -23,6 +24,7 @@ const Index = () => {
       <FaqSection />
       <CallToActionSection />
       <FooterSection />
+      <BackToTop />
     </main>
   );
 };
