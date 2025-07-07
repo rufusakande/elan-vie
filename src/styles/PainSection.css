@@ -1,0 +1,165 @@
+
+#PainSection {
+  padding: var(--spacing-3xl) 0;
+  background: var(--color-white);
+  position: relative;
+}
+
+#PainSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to bottom, var(--color-beige-light), transparent);
+}
+
+#PainSection .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+#PainSection .pain-header {
+  text-align: center;
+  margin-bottom: var(--spacing-3xl);
+}
+
+#PainSection .pain-title {
+  font-family: var(--font-primary);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--color-gray-800);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.2;
+}
+
+#PainSection .pain-title .highlight {
+  color: var(--color-orange-warm);
+  font-style: italic;
+}
+
+#PainSection .pain-subtitle {
+  font-family: var(--font-secondary);
+  font-size: 1.2rem;
+  color: var(--color-gray-600);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+#PainSection .pain-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-3xl);
+}
+
+#PainSection .pain-card {
+  background: var(--color-gray-50);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  text-align: center;
+  transition: all var(--transition-medium);
+  border: 1px solid var(--color-gray-100);
+}
+
+#PainSection .pain-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  background: var(--color-white);
+}
+
+#PainSection .pain-card-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto var(--spacing-md);
+  background: linear-gradient(135deg, var(--color-orange-warm), var(--color-yellow-solar));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#PainSection .pain-icon {
+  width: 28px;
+  height: 28px;
+  color: var(--color-white);
+}
+
+#PainSection .pain-card-title {
+  font-family: var(--font-primary);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-gray-800);
+  margin-bottom: var(--spacing-sm);
+}
+
+#PainSection .pain-card-description {
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+  color: var(--color-gray-600);
+  line-height: 1.6;
+}
+
+#PainSection .pain-conclusion {
+  text-align: center;
+  background: linear-gradient(135deg, var(--color-beige-light), var(--color-green-light));
+  border-radius: var(--border-radius-xl);
+  padding: var(--spacing-xl);
+  border: 1px solid var(--color-green-nature);
+}
+
+#PainSection .pain-conclusion-text {
+  font-family: var(--font-primary);
+  font-size: 1.3rem;
+  color: var(--color-gray-700);
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#PainSection .pain-conclusion-text em {
+  color: var(--color-green-nature);
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #PainSection {
+    padding: var(--spacing-2xl) 0;
+  }
+  
+  #PainSection .pain-title {
+    font-size: 2rem;
+  }
+  
+  #PainSection .pain-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  #PainSection .pain-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  #PainSection .pain-conclusion-text {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #PainSection .pain-title {
+    font-size: 1.75rem;
+  }
+  
+  #PainSection .container {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  #PainSection .pain-card {
+    padding: var(--spacing-lg);
+  }
+}
