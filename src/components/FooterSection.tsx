@@ -4,6 +4,9 @@ import { Heart, Mail, MapPin } from 'lucide-react';
 import '../styles/FooterSection.css';
 
 const FooterSection = () => {
+
+  const year = new Date().getFullYear();
+
   return (
     <footer id="FooterSection" className="footer-section">
       <div className="container">
@@ -42,7 +45,7 @@ const FooterSection = () => {
         
         <div className="footer-bottom">
           <p className="footer-copyright">
-            © 2024 L'Élan VIE - David. Tous droits réservés.
+            © {year} L'Élan VIE - David. Tous droits réservés.
           </p>
           <p className="footer-love">
             Créé avec amour pour votre bien-être 🌱
