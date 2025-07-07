@@ -1,0 +1,225 @@
+
+#OfferSection {
+  padding: var(--spacing-3xl) 0;
+  background: linear-gradient(135deg, var(--color-white) 0%, var(--color-beige-light) 100%);
+  position: relative;
+}
+
+#OfferSection .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+#OfferSection .offer-header {
+  text-align: center;
+  margin-bottom: var(--spacing-3xl);
+}
+
+#OfferSection .offer-title {
+  font-family: var(--font-primary);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--color-gray-800);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.2;
+}
+
+#OfferSection .offer-title .highlight {
+  color: var(--color-blue-calm);
+  font-style: italic;
+}
+
+#OfferSection .offer-subtitle {
+  font-family: var(--font-secondary);
+  font-size: 1.2rem;
+  color: var(--color-gray-600);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+#OfferSection .offer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--spacing-3xl);
+  align-items: start;
+}
+
+#OfferSection .offer-features {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+#OfferSection .feature-card {
+  background: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-gray-100);
+  transition: all var(--transition-medium);
+}
+
+#OfferSection .feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+#OfferSection .feature-icon-wrapper {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--color-blue-calm), var(--color-blue-light));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+#OfferSection .feature-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--color-white);
+}
+
+#OfferSection .feature-content {
+  flex: 1;
+}
+
+#OfferSection .feature-title {
+  font-family: var(--font-primary);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-gray-800);
+  margin-bottom: var(--spacing-xs);
+}
+
+#OfferSection .feature-description {
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+  color: var(--color-gray-600);
+  line-height: 1.6;
+}
+
+#OfferSection .offer-cta-section {
+  background: linear-gradient(135deg, var(--color-green-light), var(--color-beige-light));
+  border-radius: var(--border-radius-xl);
+  padding: var(--spacing-2xl);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  border: 2px solid var(--color-green-nature);
+  position: sticky;
+  top: var(--spacing-xl);
+}
+
+#OfferSection .offer-price {
+  margin-bottom: var(--spacing-xl);
+}
+
+#OfferSection .price-label {
+  font-family: var(--font-secondary);
+  font-size: 1.1rem;
+  color: var(--color-gray-600);
+  display: block;
+  margin-bottom: var(--spacing-xs);
+}
+
+#OfferSection .price-value {
+  font-family: var(--font-primary);
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--color-green-nature);
+  display: block;
+  margin-bottom: var(--spacing-xs);
+}
+
+#OfferSection .price-note {
+  font-family: var(--font-secondary);
+  font-size: 0.9rem;
+  color: var(--color-gray-500);
+  font-style: italic;
+}
+
+#OfferSection .offer-cta-primary {
+  background: linear-gradient(135deg, var(--color-green-nature) 0%, var(--color-green-dark) 100%);
+  color: var(--color-white);
+  border: none;
+  padding: var(--spacing-md) var(--spacing-2xl);
+  border-radius: var(--border-radius-md);
+  font-family: var(--font-secondary);
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-medium);
+  box-shadow: var(--shadow-md);
+  width: 100%;
+  margin-bottom: var(--spacing-md);
+}
+
+#OfferSection .offer-cta-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+#OfferSection .offer-guarantee {
+  font-family: var(--font-secondary);
+  font-size: 0.9rem;
+  color: var(--color-gray-600);
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  #OfferSection .offer-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+  
+  #OfferSection .offer-cta-section {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  #OfferSection {
+    padding: var(--spacing-2xl) 0;
+  }
+  
+  #OfferSection .offer-title {
+    font-size: 2rem;
+  }
+  
+  #OfferSection .offer-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  #OfferSection .feature-card {
+    padding: var(--spacing-lg);
+  }
+  
+  #OfferSection .price-value {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #OfferSection .offer-title {
+    font-size: 1.75rem;
+  }
+  
+  #OfferSection .container {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  #OfferSection .feature-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  #OfferSection .offer-cta-section {
+    padding: var(--spacing-xl);
+  }
+}

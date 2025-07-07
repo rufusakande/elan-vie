@@ -54,7 +54,13 @@ const BenefitsSection = () => {
         
         <div className="benefits-grid">
           {benefits.map((benefit, index) => (
-            <div key={index} className="benefit-card" style={{ '--card-color': benefit.color }}>
+            <div 
+              key={index} 
+              className="benefit-card"
+              style={{
+                '--card-color': benefit.color
+              } as React.CSSProperties}
+            >
               <div className="benefit-card-icon">
                 {benefit.icon}
               </div>

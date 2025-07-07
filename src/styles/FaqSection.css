@@ -1,0 +1,198 @@
+
+#FaqSection {
+  padding: var(--spacing-3xl) 0;
+  background: linear-gradient(135deg, var(--color-gray-50) 0%, var(--color-beige-light) 100%);
+  position: relative;
+}
+
+#FaqSection .container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+#FaqSection .faq-header {
+  text-align: center;
+  margin-bottom: var(--spacing-3xl);
+}
+
+#FaqSection .faq-title {
+  font-family: var(--font-primary);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--color-gray-800);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.2;
+}
+
+#FaqSection .faq-title .highlight {
+  color: var(--color-orange-warm);
+  font-style: italic;
+}
+
+#FaqSection .faq-subtitle {
+  font-family: var(--font-secondary);
+  font-size: 1.2rem;
+  color: var(--color-gray-600);
+  line-height: 1.6;
+}
+
+#FaqSection .faq-list {
+  margin-bottom: var(--spacing-2xl);
+}
+
+#FaqSection .faq-item {
+  background: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  margin-bottom: var(--spacing-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-gray-100);
+  overflow: hidden;
+  transition: all var(--transition-medium);
+}
+
+#FaqSection .faq-item:hover {
+  box-shadow: var(--shadow-md);
+}
+
+#FaqSection .faq-item.open {
+  border-color: var(--color-green-nature);
+}
+
+#FaqSection .faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: var(--spacing-xl);
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-md);
+  transition: all var(--transition-medium);
+}
+
+#FaqSection .faq-question:hover {
+  background: var(--color-gray-50);
+}
+
+#FaqSection .faq-item.open .faq-question {
+  background: linear-gradient(135deg, var(--color-green-light), var(--color-beige-light));
+}
+
+#FaqSection .faq-question-text {
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-gray-800);
+  line-height: 1.4;
+}
+
+#FaqSection .faq-icon {
+  color: var(--color-green-nature);
+  flex-shrink: 0;
+  transition: transform var(--transition-medium);
+}
+
+#FaqSection .faq-item.open .faq-icon {
+  transform: rotate(180deg);
+}
+
+#FaqSection .faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-medium) ease-out;
+}
+
+#FaqSection .faq-item.open .faq-answer {
+  max-height: 300px;
+}
+
+#FaqSection .faq-answer-content {
+  padding: 0 var(--spacing-xl) var(--spacing-xl);
+}
+
+#FaqSection .faq-answer-content p {
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+  color: var(--color-gray-600);
+  line-height: 1.6;
+  margin: 0;
+}
+
+#FaqSection .faq-footer {
+  text-align: center;
+  background: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-gray-100);
+}
+
+#FaqSection .faq-contact {
+  font-family: var(--font-secondary);
+  font-size: 1.1rem;
+  color: var(--color-gray-600);
+  margin: 0;
+}
+
+#FaqSection .faq-contact-btn {
+  background: none;
+  border: none;
+  color: var(--color-green-nature);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-left: var(--spacing-xs);
+  transition: color var(--transition-fast);
+}
+
+#FaqSection .faq-contact-btn:hover {
+  color: var(--color-green-dark);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #FaqSection {
+    padding: var(--spacing-2xl) 0;
+  }
+  
+  #FaqSection .faq-title {
+    font-size: 2rem;
+  }
+  
+  #FaqSection .faq-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  #FaqSection .faq-question {
+    padding: var(--spacing-lg);
+  }
+  
+  #FaqSection .faq-question-text {
+    font-size: 1.1rem;
+  }
+  
+  #FaqSection .faq-answer-content {
+    padding: 0 var(--spacing-lg) var(--spacing-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  #FaqSection .faq-title {
+    font-size: 1.75rem;
+  }
+  
+  #FaqSection .container {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  #FaqSection .faq-question {
+    padding: var(--spacing-md);
+  }
+  
+  #FaqSection .faq-question-text {
+    font-size: 1rem;
+  }
+}
